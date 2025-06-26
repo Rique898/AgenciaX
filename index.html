@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AgênciaX | Soluções Digitais, Produtos e Serviços Web</title>
+
+  <!-- SEO -->
+  <meta name="description" content="A AgênciaX oferece soluções inovadoras em produtos digitais, serviços web, SEO e design UI/UX para transformar sua presença online.">
+  <meta name="keywords" content="AgênciaX, produtos digitais, serviços web, SEO, UI/UX, soluções digitais, site moderno, agência de design, agência digital, criação de sites">
+  <meta name="author" content="AgênciaX">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.seusite.com/index.html" />
+
+  <!-- Open Graph (para redes sociais) -->
+  <meta property="og:title" content="AgênciaX | Soluções Digitais e Web Design Profissional">
+  <meta property="og:description" content="Simplifique operações, aumente sua receita e encante seus clientes com a AgênciaX. Conheça nossos serviços e produtos inovadores.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.seusite.com/">
+  <meta property="og:image" content="https://www.seusite.com/images/seo-cover.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AgênciaX | Soluções Digitais e Web Design Profissional">
+  <meta name="twitter:description" content="Descubra como a AgênciaX pode transformar sua presença digital com design, SEO e inovação.">
+  <meta name="twitter:image" content="https://www.seusite.com/images/seo-cover.jpg">
+
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/index.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="background-lines">
+    <span class="line line1"></span>
+    <span class="line line2"></span>
+    <span class="line line3"></span>
+    <span class="line line4"></span>
+    <span class="line line5"></span>
+  </div>
+
+  <header class="navbar" data-aos="fade-down">
+    <div class="logo">AgênciaX</div>
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="produtos.html">Produtos</a></li>
+        <li><a href="solucoes.html">Soluções</a></li>
+        <li><a href="recursos.html">Recursos</a></li>
+        <li><a href="servicos.html">Serviços</a></li>
+      </ul>
+    </nav>
+    <div class="actions">
+      <button onclick="window.location.href='contato.html'" class="btn outline">ENTRE EM CONTATO</button>
+      <button class="btn primary">AGENDAR</button>
+    </div>
+  </header>
+
+  <main class="hero">
+    <p class="badge" data-aos="fade-up">[ Reconhecido como o melhor MVNE globalmente ]</p>
+    <h1 class="headline" data-aos="fade-up" data-aos-delay="200">
+      Simplifique as operações,<br> aumente a receita e<br> encante os clientes
+    </h1>
+    <div class="hero-buttons" data-aos="fade-up" data-aos-delay="400">
+      <button onclick="window.location.href='servicos.html'" class="btn dark">SERVIÇOS →</button>
+      <button onclick="window.location.href='produtos.html'" class="btn light">PRODUTOS →</button>
+    </div>
+  </main>
+
+  <div class="cookie-banner" id="cookieBanner" data-aos="zoom-in-up" data-aos-duration="800">
+    <span class="title">🍪 Aviso de Cookies</span>
+    <p class="description">
+      Utilizamos cookies para garantir que você tenha a melhor experiência em nosso site.
+      <a href="#">Leia nossa política de cookies</a>.
+    </p>
+    <div class="cookie-buttons">
+      <button onclick="acceptCookies()">ACEITAR</button>
+      <button onclick="declineCookies()">DEIXAR</button>
+    </div>
+  </div>
+
+  <footer class="footer-fino">
+    <p>© 2025 AgênciaX. Todos os direitos reservados.</p>
+  </footer>  
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+
+    function acceptCookies() {
+      document.getElementById('cookieBanner').style.display = 'none';
+    }
+
+    function declineCookies() {
+      document.getElementById('cookieBanner').style.display = 'none';
+    }
+  </script>
+
+  <script src="css/js/index.js"></script>
+</body>
+</html>

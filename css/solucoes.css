@@ -1,0 +1,397 @@
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+  color: white;
+  background: #0e1016;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background: linear-gradient(to right, #141e30, #243b55);
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #0b0f13;
+  position: relative;
+  z-index: 1;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #e4f0fc;
+}
+
+.actions .btn {
+  margin-left: 0.5rem;
+}
+
+.btn {
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  font-weight: 600;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Estilo dos botões */
+.btn.primary {
+  background: linear-gradient(135deg, #00ffff, #5beeff);
+  color: #000;
+  box-shadow: 0 0 10px rgba(91, 238, 255, 0.5);
+}
+
+.btn.primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(91, 238, 255, 0.8);
+}
+
+.btn.outline {
+  background: #000;
+  color: #5beeff;
+  border: 1px solid #5beeff;
+}
+
+.btn.outline:hover {
+  color: #00ffff;
+  border-color: #00ffff;
+  transform: scale(1.05);
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  padding: 4rem 2rem 2rem;
+  text-align: center;
+  flex: 1; /* Faz o content crescer para empurrar o footer para baixo */
+}
+
+.content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.content p {
+  max-width: 600px;
+  margin: 0 auto 3rem;
+  font-size: 1.1rem;
+  color: #cce7f0;
+}
+
+.solucoes-destaque {
+  background: linear-gradient(to right top, #0f2027, #203a43, #2c5364);
+  padding: 4rem 2rem;
+  border-radius: 8px;
+  margin-bottom: 4rem;
+}
+
+.solucoes-destaque h2 {
+  font-size: 2rem;
+  color: #00ffff;
+  margin-bottom: 2rem;
+}
+
+.solucoes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #5beeff44;
+  padding: 1.5rem;
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 15px rgba(91, 238, 255, 0.4);
+}
+
+.card img {
+  width: 48px;
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #cce7f0;
+}
+
+.footer-fino {
+  background-color: #0b0f13;
+  color: #e4f0fc;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  border-top: 1px solid #222;
+  user-select: none;
+  margin-top: auto; /* Garante que o footer seja empurrado para baixo */
+}
+
+/* Botão flutuante voltar ao topo */
+#topBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10;
+  background: #00ffff;
+  border: none;
+  padding: 0.6rem 1rem;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  color: #000;
+  cursor: pointer;
+  display: none;
+  box-shadow: 0 0 10px rgba(0,255,255,0.4);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+#topBtn:hover {
+  background: #5beeff;
+  transform: scale(1.1);
+}
+
+/* === Sessão Cases de Sucesso === */
+.cases-sucesso {
+  padding: 4rem 2rem;
+  background: linear-gradient(to right top, #0f2027, #203a43, #2c5364);
+  color: #cce7f0;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  border-top: 7px solid transparent;;
+  margin-top: 4rem;
+}
+
+.cases-sucesso h2 {
+  font-size: 2rem;
+  color: #00ffff;
+  margin-bottom: 1.5rem;
+  font-weight: 800;
+}
+
+.cases-sucesso p {
+  max-width: 700px;
+  margin: 0 auto 3rem auto;
+  font-size: 1.1rem;
+  color: #cce7f0cc;
+  line-height: 1.5;
+}
+
+.cases-lista {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 0 1rem;
+}
+
+.case {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #5beeff44;
+  padding: 2rem 1.5rem;
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 10px rgba(91, 238, 255, 0.15);
+  width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #e4f0fc;
+  cursor: default;
+}
+
+.case:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px rgba(91, 238, 255, 0.5);
+}
+
+.case h3 {
+  font-size: 1.3rem;
+  color: #00ffff;
+  margin-bottom: 0.7rem;
+  font-weight: 700;
+}
+
+.case p {
+  font-size: 1rem;
+  color: #cce7f0cc;
+  line-height: 1.4;
+}
+
+/* === Sessão Parallax === */
+.parallax-section {
+  position: relative;
+  background-image: url('plane-8616271_1920.jpg'); 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 8rem 2rem;
+  color: #e4f0fc;
+  text-align: center;
+  min-height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+  z-index: 0;
+  border-radius: 12px;  
+}
+
+.parallax-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.parallax-content {
+  position: relative;
+  background: rgba(11, 15, 19, 0.85);
+  padding: 3rem 2.5rem;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 90%;
+  z-index: 1;
+  box-shadow: 0 0 15px rgba(91, 238, 255, 0.5);
+}
+
+.parallax-content h2 {
+  font-weight: 800;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #00ffff;
+}
+
+.parallax-content p {
+  font-size: 1.15rem;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+  color: #cce7f0cc;
+}
+
+.parallax-content button {
+  background: linear-gradient(135deg, #00ffff, #5beeff);
+  border: none;
+  color: #000;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(91, 238, 255, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.parallax-content button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(91, 238, 255, 0.8);
+}
+
+/* === Responsividade === */
+@media (max-width: 768px) {
+  .cases-lista {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .case {
+    width: 90%;
+    max-width: 350px;
+  }
+
+  .parallax-content h2 {
+    font-size: 2rem;
+  }
+
+  .parallax-content p {
+    font-size: 1rem;
+  }
+}
+
+.fale-conosco-box {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  max-width: 600px;
+  text-align: center;
+  color: #e4f0fc;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+  z-index: 10;
+}
+
+.fale-conosco-box h2 {
+  font-weight: 800;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #00ffff;
+}
+
+.fale-conosco-box p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #cce7f0cc;
+  line-height: 1.4;
+}
+
+.btn-fale-conosco {
+  background: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #000;
+  box-shadow: 0 0 10px rgba(91, 238, 255, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-fale-conosco:hover {
+  transform: scale(1.05);
+}
+
+

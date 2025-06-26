@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Produtos - AgênciaX</title>
+  <link rel="stylesheet" href="css/produtos.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+</head>
+<body>
+  <header class="navbar" data-aos="fade-down" data-aos-duration="1000">
+    <div class="logo">AgênciaX</div>
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="produtos.html">Produtos</a></li>
+        <li><a href="solucoes.html">Soluções</a></li>
+        <li><a href="recursos.html">Recursos</a></li>
+        <li><a href="servicos.html">Serviços</a></li>
+      </ul>
+    </nav>
+    <div class="actions" data-aos="fade-left">
+      <button onclick="window.location.href='contato.html'" class="btn outline">ENTRE EM CONTATO</button>
+      <button class="btn primary">AGENDAR</button>
+    </div>
+  </header>
+
+  <main class="page-content">
+    <section class="intro" data-aos="zoom-in" data-aos-duration="1200">
+      <h1>Conheça nossos Produtos</h1>
+      <p>Oferecemos soluções inovadoras que atendem às necessidades do seu negócio com qualidade e eficiência.</p>
+    </section>
+
+    <!-- Filtros -->
+    <section class="filter-buttons" data-aos="fade-up">
+      <button class="filter-btn" data-category="all">Todos</button>
+      <button class="filter-btn" data-category="web">Web</button>
+      <button class="filter-btn" data-category="ui">UI/UX</button>
+      <button class="filter-btn" data-category="seo">SEO</button>
+    </section>
+
+    <!-- Lista de Produtos -->
+    <section class="products-list">
+      <article class="product-card" data-category="web" data-aos="fade-up">
+        <img src="css/Capturadetela2025-06-24234616.png" alt="Produto 1" />
+        <h2>Produto Web</h2>
+        <p>Solução completa para desenvolvimento web responsivo e moderno.</p>
+        <button class="btn primary">Saiba mais</button>
+      </article>
+      <article class="product-card" data-category="ui" data-aos="fade-up">
+        <img src="css/Capturadetela2025-06-24235840.png" alt="Produto 2" />
+        <h2>Design UI</h2>
+        <p>Interfaces atrativas e acessíveis com foco no usuário.</p>
+        <button class="btn primary">Saiba mais</button>
+      </article>
+      <article class="product-card" data-category="seo" data-aos="fade-up">
+        <img src="css/Capturadetela2025-06-25010353.png" alt="Produto 3" />
+        <h2>SEO Otimizado</h2>
+        <p>Aumente sua visibilidade nos mecanismos de busca com estratégias eficientes.</p>
+        <button class="btn primary">Saiba mais</button>
+      </article>
+    </section>
+
+    <!-- Carrossel de Destaques -->
+    <section class="highlights-carousel" data-aos="fade-up">
+      <div class="carousel">
+        <div class="carousel-item">"A AgênciaX revolucionou meu negócio!" - Cliente A</div>
+        <div class="carousel-item">"Profissionalismo e criatividade de sobra." - Cliente B</div>
+        <div class="carousel-item">"Resultados rápidos e satisfatórios." - Cliente C</div>
+      </div>
+    </section>
+
+    <!-- Sessão: O que os clientes dizem -->
+    <section class="testimonials" data-aos="fade-up" data-aos-delay="600">
+      <h2>O que nossos clientes dizem</h2>
+      <blockquote>
+        <p>"Desde que adotamos os recursos da AgênciaX, nossa produtividade aumentou 40%! Serviço impecável."</p>
+        <footer>- João Silva, CEO da Empresa XYZ</footer>
+      </blockquote>
+      <blockquote>
+        <p>"Ferramentas intuitivas e suporte rápido. Recomendo para quem quer crescer com tecnologia."</p>
+        <footer>- Maria Fernandes, Diretora de Marketing</footer>
+      </blockquote>
+    </section>
+
+    <!-- Sessão: Perguntas Frequentes -->
+    <section class="faq" data-aos="fade-up" data-aos-delay="800">
+      <h2>Perguntas Frequentes</h2>
+      <details>
+        <summary>Quais integrações estão disponíveis?</summary>
+        <p>Oferecemos integrações com as principais plataformas como CRM, ERP e ferramentas de análise.</p>
+      </details>
+      <details>
+        <summary>Posso testar antes de contratar?</summary>
+        <p>Sim! Temos um período de teste gratuito para que você conheça todas as funcionalidades.</p>
+      </details>
+      <details>
+        <summary>Como funciona o suporte?</summary>
+        <p>Nosso suporte é 24/7 via chat, email e telefone para garantir que você esteja sempre amparado.</p>
+      </details>
+    </section>
+
+    <!-- Parallax Section -->
+    <section class="parallax-section">
+      <div class="parallax-content" data-aos="zoom-in">
+        <h2>Experimente a inovação com a AgênciaX</h2>
+        <p>Transforme sua presença digital com nossos produtos exclusivos.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Botão Voltar ao Topo -->
+<button id="topBtn" title="Voltar ao topo">↑</button>
+
+  <footer class="footer-fino" data-aos="fade-up">
+    <p>© 2025 AgênciaX. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+
+    // Filtro de produtos
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const productCards = document.querySelectorAll('.product-card');
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const category = btn.getAttribute('data-category');
+        productCards.forEach(card => {
+          card.style.display = category === 'all' || card.dataset.category === category ? 'block' : 'none';
+        });
+      });
+    });
+
+    // FAQ toggle (para abrir e fechar)
+    document.querySelectorAll('.faq details').forEach(detail => {
+      detail.addEventListener('toggle', () => {
+        // Fecha outros detalhes quando abre um
+        if(detail.open) {
+          document.querySelectorAll('.faq details').forEach(other => {
+            if(other !== detail) other.open = false;
+          });
+        }
+      });
+    });
+
+    // Botão Voltar ao topo
+    const topBtn = document.getElementById("topBtn");
+    window.onscroll = () => {
+      topBtn.style.display = (document.documentElement.scrollTop > 300) ? "block" : "none";
+    };
+    topBtn.onclick = () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+  </script>
+</body>
+</html>

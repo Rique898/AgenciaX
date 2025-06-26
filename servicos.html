@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Serviços - Agência Moderna</title>
+  <link rel="stylesheet" href="css/servicos.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+</head>
+<body>
+
+<div class="shapes-background">
+    <div class="shape" style="--i:0;"></div>
+    <div class="shape" style="--i:1;"></div>
+    <div class="shape" style="--i:2;"></div>
+    <div class="shape" style="--i:3;"></div>
+    <div class="shape" style="--i:4;"></div>
+    <div class="shape" style="--i:5;"></div>
+    <div class="shape" style="--i:6;"></div>
+    <div class="shape" style="--i:7;"></div>
+    <div class="shape" style="--i:8;"></div>
+    <div class="shape" style="--i:9;"></div>
+  </div>
+
+  <header class="navbar" data-aos="fade-down" data-aos-duration="1200">
+    <div class="logo">AgênciaX</div>
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="produtos.html">Produtos</a></li>
+        <li><a href="solucoes.html">Soluções</a></li>
+        <li><a href="recursos.html">Recursos</a></li>
+        <li><a href="servicos.html">Serviços</a></li>
+      </ul>
+    </nav>
+    <div class="actions" data-aos="fade-left" data-aos-delay="200">
+      <button onclick="window.location.href='contato.html'" class="btn outline">ENTRE EM CONTATO</button>
+      <button class="btn primary">AGENDAR</button>
+    </div>
+  </header>
+
+  <main class="content">
+    <h1 data-aos="flip-down" data-aos-delay="300">Planos de Serviços</h1>
+    <p data-aos="zoom-out" data-aos-delay="600">Escolha o pacote ideal para o seu negócio</p>
+
+ <section class="planos-servicos" data-aos="fade-up" data-aos-delay="300">
+  <div class="pacotes-container">
+
+    <div class="pacote">
+      <h3 class="titulo-pacote">Plano Básico</h3>
+      <p class="descricao-pacote">Para quem está começando a presença digital.</p>
+      <ul class="lista-beneficios">
+        <li>Site institucional responsivo</li>
+        <li>Hospedagem inclusa</li>
+        <li>Suporte padrão</li>
+        <li>Email profissional</li>
+      </ul>
+      <button class="btn-planos">Selecionar Plano</button> 
+    </div>
+
+    <div class="pacote destaque">
+      <h3 class="titulo-pacote">Plano Profissional</h3>
+      <p class="descricao-pacote">Mais recursos e suporte para expandir sua marca.</p>
+      <ul class="lista-beneficios">
+        <li>SEO avançado</li>
+        <li>Dashboard com métricas</li>
+        <li>Suporte prioritário</li>
+        <li>Otimização de performance</li>
+      </ul>
+      <button class="btn-planos">Selecionar Plano</button>
+    </div>
+
+    <div class="pacote">
+      <h3 class="titulo-pacote">Plano Premium</h3>
+      <p class="descricao-pacote">Soluções completas com estratégias personalizadas.</p>
+      <ul class="lista-beneficios">
+        <li>Marketing digital completo</li>
+        <li>Consultoria contínua</li>
+        <li>Integrações com IA</li>
+        <li>Design exclusivo e manutenção mensal</li>
+      </ul>
+      <button class="btn-planos">Selecionar Plano</button>
+    </div>
+
+    <div class="pacote">
+      <h3 class="titulo-pacote">Plano Corporativo</h3>
+      <p class="descricao-pacote">Para empresas com alto volume e demandas específicas.</p>
+      <ul class="lista-beneficios">
+        <li>Equipe dedicada</li>
+        <li>Infraestrutura escalável (cloud)</li>
+        <li>Relatórios personalizados</li>
+        <li>Gerente de conta exclusivo</li>
+        <li>Treinamentos para equipe</li>
+      </ul>
+      <button class="btn-planos">Solicitar Demonstração</button>
+    </div>
+
+    <div class="pacote destaque">
+      <h3 class="titulo-pacote">Plano Custom</h3>
+      <p class="descricao-pacote">Solução sob medida com consultoria completa.</p>
+      <ul class="lista-beneficios">
+        <li>Levantamento técnico e estratégico</li>
+        <li>Planejamento 100% personalizado</li>
+        <li>Ferramentas exclusivas</li>
+        <li>Atualizações semanais + roadmap</li>
+        <li>Disponibilidade 24/7</li>
+      </ul>
+      <button class="btn-planos">Agendar Consultoria</button>
+    </div>
+
+  </div>
+</section>
+  </main>
+
+   <!-- Botão Voltar ao Topo -->
+<button id="topBtn" title="Voltar ao topo">↑</button>
+
+  <footer class="footer-fino" data-aos="fade-up" data-aos-delay="400">
+    <p>© 2025 AgênciaX. Todos os direitos reservados.</p>
+  </footer> 
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+
+    // Botão Voltar ao topo
+    const topBtn = document.getElementById("topBtn");
+    window.onscroll = () => {
+      topBtn.style.display = (document.documentElement.scrollTop > 300) ? "block" : "none";
+    };
+    topBtn.onclick = () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+  </script>
+
+</body>
+</html>

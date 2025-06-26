@@ -1,0 +1,123 @@
+ <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Soluções - Agência Moderna</title>
+  <link rel="stylesheet" href="css/solucoes.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+</head>
+<body>
+
+  <canvas id="particles"></canvas>
+
+  <header class="navbar" data-aos="slide-up" data-aos-duration="1000">
+    <div class="logo">AgênciaX</div>
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="produtos.html">Produtos</a></li>
+        <li><a href="solucoes.html">Soluções</a></li>
+        <li><a href="recursos.html">Recursos</a></li>
+        <li><a href="servicos.html">Serviços</a></li>
+      </ul>
+    </nav>
+    <div class="actions" data-aos="fade-up" data-aos-delay="200">
+      <button onclick="window.location.href='contato.html'" class="btn outline">ENTRE EM CONTATO</button>
+      <button class="btn primary">AGENDAR</button>
+    </div>
+  </header>
+
+  <main class="content">
+    <h1 data-aos="zoom-in-up" data-aos-delay="400">Nossas Soluções</h1>
+    <p data-aos="flip-left" data-aos-delay="700">
+      Veja como podemos transformar sua ideia em realidade com tecnologia moderna e design impactante.
+    </p>
+
+    <section class="solucoes-destaque" data-aos="fade-up" data-aos-delay="300">
+      <h2>Soluções Inteligentes</h2>
+      <div class="solucoes-grid">
+        <div class="card" data-aos="zoom-in" data-aos-delay="500">
+          <h3>Web Design</h3>
+          <p>Layouts modernos, responsivos e pensados para encantar seu público.</p>
+        </div>
+        <div class="card" data-aos="zoom-in" data-aos-delay="700">
+          <h3>Otimização SEO</h3>
+          <p>Impulsione sua visibilidade nos buscadores com estratégias eficazes.</p>
+        </div>
+        <div class="card" data-aos="zoom-in" data-aos-delay="900">
+          <h3>Análise de Dados</h3>
+          <p>Use dados a seu favor para decisões mais inteligentes e ágeis.</p>
+        </div>
+        <div class="card" data-aos="zoom-in" data-aos-delay="1100">
+          <h3>Automação</h3>
+          <p>Reduza custos e aumente produtividade com soluções automatizadas.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cases-sucesso">
+      <h2>Cases de Sucesso</h2>
+      <p>Veja alguns projetos que transformaram os negócios dos nossos clientes com resultados incríveis.</p>
+      <div class="cases-lista" style="display:flex; gap:20px; justify-content:center;">
+        <article class="case" style="background:#393e46; padding:20px; border-radius:8px; color:white;">
+          <h3>Projeto Alpha</h3>
+          <p>Redesign completo do site que aumentou a conversão em 45%.</p>
+        </article>
+        <article class="case" style="background:#393e46; padding:20px; border-radius:8px; color:white;">
+          <h3>Campanha Beta</h3>
+          <p>Automatização do marketing com ROI 3x maior em 6 meses.</p>
+        </article>
+        <article class="case" style="background:#393e46; padding:20px; border-radius:8px; color:white;">
+          <h3>Análise Gamma</h3>
+          <p>Insights de dados que otimizaram operações e reduziram custos.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="parallax-section" style="
+      background-image: url('css/plane-8616271_1920.jpg');
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 8rem 2rem;
+      color: white;
+      text-align: center;
+      min-height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    ">
+     <div class="fale-conosco-box">
+    <h2>Transforme sua empresa com a AgênciaX</h2>
+    <p>Inove, cresça e conquiste o mercado com soluções digitais sob medida.</p>
+    <button class="btn-fale-conosco" onclick="window.location.href='contato.html'">FALE CONOSCO</button>
+  </div>
+
+    </section>
+  </main>
+
+  <footer class="footer-fino" data-aos="fade-up" data-aos-delay="400">
+    <p>© 2025 AgênciaX. Todos os direitos reservados.</p>
+  </footer>
+
+  <button id="topBtn" title="Voltar ao topo">↑</button>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+
+    const topBtn = document.getElementById("topBtn");
+    window.onscroll = () => {
+      topBtn.style.display = (document.documentElement.scrollTop > 300) ? "block" : "none";
+    };
+    topBtn.onclick = () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+  </script>
+
+  <script src="css/js/solucoes.js"></script>
+</body>
+</html>
